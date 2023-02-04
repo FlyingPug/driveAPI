@@ -5,3 +5,7 @@ database:
   url: jdbc:postgresql://localhost:5432/postgres
   username: postgres
   password: postgres
+security:
+  tokenLife : 60
+storage:
+  rootDirectory: storage
