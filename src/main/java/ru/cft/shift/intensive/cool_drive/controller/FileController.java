@@ -23,12 +23,12 @@ import java.util.Objects;
  */
 @RestController
 @RequestMapping(value = "driveAPI/users/files", produces = MediaType.APPLICATION_JSON_VALUE)
-public class fileController {
+public class FileController {
     private final FileService fileService;
     private final UserDetailsService userDetailsService;
 
     @Autowired
-    public fileController(FileService fileService, UserDetailsService userDetailsService) {
+    public FileController(FileService fileService, UserDetailsService userDetailsService) {
         this.fileService = fileService;
         this.userDetailsService = userDetailsService;
     }

@@ -23,12 +23,12 @@ import java.util.Objects;
  */
 @RestController
 @RequestMapping(value = "driveAPI/users/folders", produces = MediaType.APPLICATION_JSON_VALUE)
-public class folderController {
+public class FolderController {
     private final FolderService folderService;
     private final UserDetailsService userDetailsService;
 
     @Autowired
-    public folderController(FolderService folderService, UserDetailsService userDetailsService) {
+    public FolderController(FolderService folderService, UserDetailsService userDetailsService) {
         this.folderService = folderService;
         this.userDetailsService = userDetailsService;
     }
@@ -51,7 +51,7 @@ public class folderController {
         if (!(Objects.equals(dir.getAccount().getUsername(), owner.getUsername())))
             throw new UserNotAuthorized("wrong token");
         folderService.renameDirectory(folder.getId(), folder.getName());
-        return new ResponseEntity<Void>(HttpStatus.OK);
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 
     @GetMapping

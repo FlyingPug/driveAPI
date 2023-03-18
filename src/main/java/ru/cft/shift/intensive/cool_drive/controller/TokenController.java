@@ -21,13 +21,12 @@ import javax.validation.Valid;
  */
 @RestController
 @RequestMapping(value = "driveAPI/tokens", produces = MediaType.APPLICATION_JSON_VALUE)
-public class tokenController {
-
+public class TokenController {
     private final UserDetailsService userService;
     private final JwtUtils jwtUtils;
 
     @Autowired
-    public tokenController(UserDetailsService userDetailsService, JwtUtils jwtUtils) {
+    public TokenController(UserDetailsService userDetailsService, JwtUtils jwtUtils) {
         this.userService = userDetailsService;
         this.jwtUtils = jwtUtils;
     }

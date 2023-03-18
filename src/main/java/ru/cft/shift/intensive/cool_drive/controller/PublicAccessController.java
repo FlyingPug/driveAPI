@@ -15,11 +15,11 @@ import javax.validation.Valid;
  */
 @RestController
 @RequestMapping(value = "driveAPI/public", produces = MediaType.APPLICATION_JSON_VALUE)
-public class publicAccessController {
+public class PublicAccessController {
     private final FileService fileService;
 
     @Autowired
-    public publicAccessController(FileService fileService) {
+    public PublicAccessController(FileService fileService) {
         this.fileService = fileService;
     }
 
